@@ -1,13 +1,28 @@
 import React from 'react';
+
 import Header from './components/header/header';
-import MainContent from './components/main/main';
-import Footer from './components/footer/footer';
+import {Hero} from './components/main/main';
+import {FeaturesGrid} from './components/main/main';
+import {StayProductive} from './components/main/main';
+import {Testimonials} from './components/main/main';
+import {CallToAction} from './components/main/main';
+import {Footer} from './components/footer/footer';
+
+
+
+
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-darkBlue text-white">
+    <div className="bg-gray-900 text-white min-h-screen">
       <Header />
-      <MainContent />
+      <main>
+        <Hero />
+        <FeaturesGrid />
+        <StayProductive />
+        <Testimonials />
+        <CallToAction />
+      </main>
       <Footer />
     </div>
   );
