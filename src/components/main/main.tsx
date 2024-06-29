@@ -1,5 +1,8 @@
 export const Hero: React.FC = () => (
   <section className="hero py-16 px-6 text-center">
+      <div className="lg:w-1/2 mb-8 lg:mb-0">
+      <img src="./images/illustration-intro.png" alt="Stay productive" className="w-full" />
+    </div>
     <h1 className="text-4xl font-bold mb-4">All your files in one secure location, accessible anywhere.</h1>
     <p className="mb-8 max-w-2xl mx-auto">
       Fylo stores all your most important files in one secure location.
@@ -12,9 +15,9 @@ export const Hero: React.FC = () => (
 );
 
 // Feature Card Component
-const FeatureCard: React.FC<{ title: string; description: string; icon: string }> = ({ title, description, icon }) => (
+export const FeatureCard: React.FC<{ title: string; description: string; icon: string }> = ({ title, description }) => (
   <div className="feature-card p-6 text-center">
-    <img src={icon} alt={title} className="h-16 mx-auto mb-4" />
+    <img src={'./images/illustration-intro.png'} alt={title} className="h-16 mx-auto mb-4" />
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p>{description}</p>
   </div>
@@ -26,22 +29,22 @@ export const FeaturesGrid: React.FC = () => (
     <FeatureCard
       title="Access your files, anywhere"
       description="The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere."
-      icon="/icon-access-anywhere.svg"
+      icon="./images/icon-access-anywhere.svg"
     />
     <FeatureCard
       title="Security you can trust"
       description="2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files."
-      icon="/icon-security.svg"
+      icon="./images/icon-security.svg"
     />
     <FeatureCard
       title="Real-time collaboration"
       description="Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required."
-      icon="/icon-collaboration.svg"
+      icon="./images/icon-collaboration.svg"
     />
     <FeatureCard
       title="Store any type of file"
       description="Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared."
-      icon="/icon-any-file.svg"
+      icon="./images/icon-any-file.svg"
     />
   </section>
 );
@@ -50,7 +53,7 @@ export const FeaturesGrid: React.FC = () => (
 export const StayProductive: React.FC = () => (
   <section className="stay-productive py-16 px-6 flex flex-col lg:flex-row items-center">
     <div className="lg:w-1/2 mb-8 lg:mb-0">
-      <img src="/illustration-stay-productive.png" alt="Stay productive" className="w-full" />
+      <img src="./images/illustration-stay-productive.png" alt="Stay productive" className="w-full" />
     </div>
     <div className="lg:w-1/2 lg:pl-12">
       <h2 className="text-3xl font-bold mb-4">Stay productive, wherever you are</h2>
@@ -61,7 +64,7 @@ export const StayProductive: React.FC = () => (
         Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
       </p>
       <a href="#" className="text-teal-400 hover:text-teal-300 flex items-center">
-        See how Fylo works <img src="/icon-arrow.svg" alt="Arrow" className="ml-2" />
+        See how Fylo works <img src="./images/icon-arrow.svg" alt="Arrow" className="ml-2" />
       </a>
     </div>
   </section>
@@ -89,19 +92,19 @@ export const Testimonials: React.FC = () => (
         quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
         name="Satish Patel"
         title="Founder & CEO, Huddle"
-        avatar="/avatar-satish.jpg"
+        avatar="./images/profile-1.jpg"
       />
       <TestimonialCard
         quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
         name="Bruce McKenzie"
         title="Founder & CEO, Huddle"
-        avatar="/avatar-bruce.jpg"
+        avatar="./images/profile-2.jpg"
       />
       <TestimonialCard
         quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
         name="Iva Boyd"
         title="Founder & CEO, Huddle"
-        avatar="/avatar-iva.jpg"
+        avatar="./images/profile-3.jpg"
       />
     </div>
   </section>
