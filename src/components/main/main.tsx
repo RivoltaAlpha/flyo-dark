@@ -1,23 +1,25 @@
 export const Hero: React.FC = () => (
   <section className="hero py-16 px-6 text-center">
       <div className="lg:w-1/2 mb-8 lg:mb-0">
-      <img src="./images/illustration-intro.png" alt="Stay productive" className="w-full" />
+        <img src="./images/illustration-intro.png" alt="Stay productive" className="ml-[600px] mb-6 " />
+      </div>
+    <div>
+      <h1 className="text-4xl font-bold mb-4">All your files in one secure location, accessible anywhere.</h1>
+      <p className="mb-8 max-w-2xl mx-auto">
+        Fylo stores all your most important files in one secure location.<br></br>
+        Access them wherever you need, share and collaborate with friends family, and co-workers.
+      </p>
+      <button className="bg-teal-400 text-gray-900 py-2 px-6 rounded-full hover:bg-teal-300">
+        Get Started
+      </button>
     </div>
-    <h1 className="text-4xl font-bold mb-4">All your files in one secure location, accessible anywhere.</h1>
-    <p className="mb-8 max-w-2xl mx-auto">
-      Fylo stores all your most important files in one secure location.
-      Access them wherever you need, share and collaborate with friends family, and co-workers.
-    </p>
-    <button className="bg-teal-400 text-gray-900 py-2 px-6 rounded-full hover:bg-teal-300">
-      Get Started
-    </button>
   </section>
 );
 
 // Feature Card Component
-export const FeatureCard: React.FC<{ title: string; description: string; icon: string }> = ({ title, description }) => (
+export const FeatureCard: React.FC<{ title: string; description: string; icon: string }> = ({ title, description, icon }) => (
   <div className="feature-card p-6 text-center">
-    <img src={'./images/illustration-intro.png'} alt={title} className="h-16 mx-auto mb-4" />
+    <img src={icon} alt={title} className="h-16 mx-auto mb-4" />
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p>{description}</p>
   </div>
@@ -25,7 +27,7 @@ export const FeatureCard: React.FC<{ title: string; description: string; icon: s
 
 // Features Grid Component
 export const FeaturesGrid: React.FC = () => (
-  <section className="features-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16 px-6">
+  <section className="features-grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16 px-6">
     <FeatureCard
       title="Access your files, anywhere"
       description="The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere."
