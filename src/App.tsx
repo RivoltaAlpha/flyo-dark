@@ -1,8 +1,8 @@
 import Header from './components/header/header';
 import {Hero} from './components/main/main';
-import {FeaturesGrid} from './components/main/main';
+import {FeaturesGrid} from './components/main/feature-card';
 import {StayProductive} from './components/main/main';
-import {Testimonials} from './components/main/main';
+import {Testimonials} from './components/main/testimonial';
 import {CallToAction} from './components/main/main';
 import {Footer} from './components/footer/footer';
 

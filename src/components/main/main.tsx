@@ -1,4 +1,4 @@
-export const Hero: React.FC = () => (
+export const Hero = () => (
   <section className="hero py-16 px-6 text-center">
       <div className="lg:w-1/2 mb-8 lg:mb-0">
         <img src="./images/illustration-intro.png" alt="Stay productive" className="ml-[600px] mb-6 " />
@@ -16,43 +16,10 @@ export const Hero: React.FC = () => (
   </section>
 );
 
-// Feature Card Component
-export const FeatureCard: React.FC<{ title: string; description: string; icon: string }> = ({ title, description, icon }) => (
-  <div className="feature-card p-6 text-center">
-    <img src={icon} alt={title} className="h-16 mx-auto mb-4" />
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p>{description}</p>
-  </div>
-);
 
-// Features Grid Component
-export const FeaturesGrid: React.FC = () => (
-  <section className="features-grid grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16 px-6">
-    <FeatureCard
-      title="Access your files, anywhere"
-      description="The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere."
-      icon="./images/icon-access-anywhere.svg"
-    />
-    <FeatureCard
-      title="Security you can trust"
-      description="2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files."
-      icon="./images/icon-security.svg"
-    />
-    <FeatureCard
-      title="Real-time collaboration"
-      description="Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required."
-      icon="./images/icon-collaboration.svg"
-    />
-    <FeatureCard
-      title="Store any type of file"
-      description="Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared."
-      icon="./images/icon-any-file.svg"
-    />
-  </section>
-);
 
 // Stay Productive Section Component
-export const StayProductive: React.FC = () => (
+export const StayProductive = () => (
   <section className="stay-productive py-16 px-6 flex flex-col lg:flex-row items-center">
     <div className="lg:w-1/2 mb-8 lg:mb-0">
       <img src="./images/illustration-stay-productive.png" alt="Stay productive" className="w-full" />
@@ -72,48 +39,9 @@ export const StayProductive: React.FC = () => (
   </section>
 );
 
-// Testimonial Card Component
-export const TestimonialCard: React.FC<{ quote: string; name: string; title: string; avatar: string }> = ({ quote, name, title, avatar }) => (
-  <div className="testimonial-card bg-gray-800 p-6 rounded-lg">
-    <p className="mb-4">{quote}</p>
-    <div className="flex items-center">
-      <img src={avatar} alt={name} className="w-10 h-10 rounded-full mr-4" />
-      <div>
-        <h4 className="font-semibold">{name}</h4>
-        <p className="text-sm">{title}</p>
-      </div>
-    </div>
-  </div>
-);
-
-// Testimonials Section Component
-export const Testimonials: React.FC = () => (
-  <section className="testimonials py-16 px-6">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <TestimonialCard
-        quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
-        name="Satish Patel"
-        title="Founder & CEO, Huddle"
-        avatar="./images/profile-1.jpg"
-      />
-      <TestimonialCard
-        quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
-        name="Bruce McKenzie"
-        title="Founder & CEO, Huddle"
-        avatar="./images/profile-2.jpg"
-      />
-      <TestimonialCard
-        quote="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
-        name="Iva Boyd"
-        title="Founder & CEO, Huddle"
-        avatar="./images/profile-3.jpg"
-      />
-    </div>
-  </section>
-);
 
 // Call-to-Action Component
-export const CallToAction: React.FC = () => (
+export const CallToAction = () => (
   <section className="cta bg-gray-800 py-16 px-6 rounded-lg max-w-4xl mx-auto text-center">
     <h2 className="text-3xl font-bold mb-4">Get early access today</h2>
     <p className="mb-8 max-w-2xl mx-auto">
