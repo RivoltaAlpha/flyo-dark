@@ -27,6 +27,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const signIn = (email: string, password: string) => {
     // Implement sign in logic
     setUser({ email });
+    setUser({  password });
   };
 
   const register = (email: string, password: string) => {
